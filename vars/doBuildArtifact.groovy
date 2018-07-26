@@ -36,8 +36,8 @@ def gradle() {
 
 def maven(boolean mavenProfile, Util util) {
     //Ejecuta maven con los settings especificados y define los profiles ne caso de que los hubiera
-    configFileProvider([configFile(fileId: 'Default_Maven_Settings', variable: 'MAVEN_SETTINGS')]) {
-        def profile
+  //  configFileProvider([configFile(fileId: 'Default_Maven_Settings', variable: 'MAVEN_SETTINGS')]) {
+  //      def profile
         //	profile = mavenProfile ? util.mvnProf() : ""
 
         sh "mvn clean"
