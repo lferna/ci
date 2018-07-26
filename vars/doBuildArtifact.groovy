@@ -21,5 +21,5 @@ def call(Map<String, String> config) {
 
 def maven(Util util) {
         sh "mvn clean"
-        sh "mvn package -Dmaven.test.skip=true -e -X"
+        sh "mvn package -Dmaven.test.skip=true -e"
 }
