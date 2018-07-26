@@ -42,7 +42,7 @@ def maven(boolean mavenProfile, Util util) {
 
         sh "mvn clean"
         sh "mvn package -Dmaven.test.skip=true -e -X"
-    }
+   // }
 }
 
 def npm(Map<String, String> config) {
