@@ -19,7 +19,7 @@ def call(Map<String, String> config) {
         stage("tools") {
             try {
                 //JAVA
-                def java = tool 'jdk1.8.0_182'
+                def java = tool 'JAVA_HOME'
                 env.PATH = "${java}/bin:${env.PATH}"
                 echo env.PATH
 
