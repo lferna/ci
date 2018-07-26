@@ -1,0 +1,19 @@
+@Library('libpipelines@master') _
+
+def config = [:]
+
+config = [gitCredentials: 'Scm-Bitbucket',
+	repo: 'silkroad',	 
+	pathSonarProperties: './sonar-project.properties',
+	mavenVersion: 'MAVEN 3.3.9',
+    mavenProfile: true,
+    //Paŕametro que define si se van a pasar los test de aceptación y los test de integración, por defecto los test sólo se pasarán en la rama master
+    test: false]
+
+
+doInitTools(config.mavenVersion)
+doGit(config.gitCredentials, config.repo)
+//doStaticAnalysis(config.repo, config.pathSonarProperties)
+doBuild(config.mavenProfile)
+doTest(config.test)
+//doUploadArtifacts()
