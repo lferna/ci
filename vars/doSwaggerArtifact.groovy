@@ -21,7 +21,10 @@ def call(Map<String, String> config) {
 
 def swagger(Util util) {
         def workspace = pwd()
-		def version = fileExists "${workspace}/generated/swagger-ui/swagger.json"
-		echo 'Workspace & file is: '
-		echo version
+		def exists = fileExists "${workspace}/generated/swagger-ui/swagger.json"
+		if (exists) {
+			echo 'Yes'
+		} else {
+			echo 'No'
+		}
 }
