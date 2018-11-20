@@ -21,7 +21,7 @@ def call(Map<String, String> config) {
 
 def swagger(Util util) {
         def workspace = pwd()
-		def version = readFile "${workspace}/README.md"
+		def version = fileExists "${workspace}/generated/swagger-ui/swagger.json"
 		echo 'Workspace & file is: '
 		echo version
 }
