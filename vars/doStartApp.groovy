@@ -7,6 +7,7 @@ def call(Map<String, Object> config) {
         doInitTools.call(config)
         doGit.call(config)		
         doBuildArtifact.call(config)        
+		doSwaggerArtifact.call(config)        
     }
 }
 
