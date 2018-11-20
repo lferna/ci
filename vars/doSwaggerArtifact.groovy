@@ -20,8 +20,8 @@ def call(Map<String, String> config) {
 }
 
 def swagger(Util util) {
-        def env.WORKSPACE = pwd()
-		def version = readFile "${env.WORKSPACE}/README.md"
+        def workspace = pwd()
+		def version = readFile "${workspace}/README.md"
 		echo 'Workspace & file is: '
 		echo version
 }
